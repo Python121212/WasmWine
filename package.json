@@ -3,8 +3,8 @@
   "private": true,
   "workspaces": [ "web" ],
   "scripts": {
-    "build:core": "cd core && cargo build --target wasm32-unknown-unknown --release",
+    "build:core": "cd core && cargo build --target wasm32-unknown-unknown --release && cp core/target/wasm32-unknown-unknown/release/wasmwine_core.wasm web/public/",
     "build:web": "cd web && npm run build",
-    "build": "npm run build:core && npm run build:web"
+    "build": "npm run build:web"
   }
 }
