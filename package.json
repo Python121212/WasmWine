@@ -1,0 +1,10 @@
+{
+  "name": "wasmwine-monorepo",
+  "private": true,
+  "workspaces": [ "web" ],
+  "scripts": {
+    "build:core": "cd core && cargo build --target wasm32-unknown-unknown --release",
+    "build:web": "cd web && npm run build",
+    "build": "npm run build:core && npm run build:web"
+  }
+}
