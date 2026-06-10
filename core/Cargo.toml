@@ -1,0 +1,10 @@
+[package]
+name = "wasmwine-core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# 低レイヤ操作のため外部依存は極限まで排除
